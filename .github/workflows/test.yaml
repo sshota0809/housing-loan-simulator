@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
-      - name: Run Test
+      - name: Prepare Test
         uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install
