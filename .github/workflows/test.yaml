@@ -3,14 +3,15 @@ on:
   push:
     branches:
       - main
-  jobs:
-    test:
-      name: Execute Test
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repo
-          uses: actions/checkout@v2
-        - name: Run Test
-          uses: borales/actions-yarn@v2.0.0
-          with:
-            cmd: test
+
+jobs:
+  test:
+    name: Execute Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Run Test
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: test
