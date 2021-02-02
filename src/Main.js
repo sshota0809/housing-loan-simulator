@@ -1,12 +1,14 @@
+import { Grid } from '@material-ui/core';
+
 import CalculateForm from './CalculateForm';
 import CalculateResult from './CalculateResult';
 
 function Main() {
   return (
-    <div>
+    <Grid container>
       <CalculateForm />
       <CalculateResult />
-    </div>
+    </Grid>
   );
 }
 
