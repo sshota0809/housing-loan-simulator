@@ -3,10 +3,20 @@ import { Grid } from '@material-ui/core';
 function CalculateForm() {
   return (
     <Grid container>
-        <p>This component is CalculateForm.</p>
+        <Grid item xs={6}>
+          <p>your age</p>
+        </Grid>
+        <Grid item xs={6}>
+          <p>your loan range</p>
+        </Grid>
+        <Grid item xs={6}>
+          <p>your salary</p>
+        </Grid>
+        <Grid item xs={6}>
+          <p>interest rate</p>
+        </Grid>
     </Grid>
   );
 }
   
 export default CalculateForm;
-  

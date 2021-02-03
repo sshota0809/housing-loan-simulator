@@ -3,6 +3,6 @@ import CalculateForm from './CalculateForm';
 
 test('renders CalculateForm', () => {
   render(<CalculateForm />);
-  const element = screen.getByText(/This component is CalculateForm./i);
+  const element = screen.getByText(/your age/i);
   expect(element).toBeInTheDocument();
 });
