@@ -7,7 +7,7 @@ function CalculateForm() {
           <p>your age</p>
         </Grid>
         <Grid item xs={6}>
-          <p>your loan range</p>
+          <p>loan amount</p>
         </Grid>
         <Grid item xs={6}>
           <p>your salary</p>
