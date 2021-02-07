@@ -1,19 +1,42 @@
-import { Grid } from '@material-ui/core';
+import React, { useState } from 'react';
+import { Grid, TextField } from '@material-ui/core';
 
 function CalculateForm() {
+  const [age, setAge] = useState(0);
+
+  const onChangeAge = event => {
+    setAge(event.target.value);
+  };
+
   return (
     <Grid container>
         <Grid item xs={6}>
-          <p>your age</p>
+          <TextField
+            required
+            label="Your Age"
+            onChange={onChangeAge}
+          />
         </Grid>
         <Grid item xs={6}>
-          <p>loan amount</p>
+          <TextField
+            required
+            label="Loan Amount"
+            // onChange={handler}
+          />
         </Grid>
         <Grid item xs={6}>
-          <p>your salary</p>
+          <TextField
+            required
+            label="Your Salary"
+            // onChange={handler}
+          />
         </Grid>
         <Grid item xs={6}>
-          <p>interest rate</p>
+          <TextField
+            required
+            label="Interest Rate"
+            // onChange={handler}
+          />
         </Grid>
     </Grid>
   );
