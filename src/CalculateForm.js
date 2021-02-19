@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Grid, TextField } from '@material-ui/core';
+import { Grid, TextField, Button } from '@material-ui/core';
 
 function CalculateForm() {
   const [age, setAge] = useState(0);
   const [loanAmount, setLoanAmount] = useState(0);
   const [salary, setSalary] = useState(0);
   const [interestRate, setInterestRate] = useState(0);
+  const [result, setResult] = useState(0);
 
   const onChangeAge = event => {
     setAge(event.target.value);
@@ -21,6 +22,10 @@ function CalculateForm() {
 
   const onInterestRate = event => {
     setInterestRate(event.target.value);
+  };
+
+  const calcurateResult = () => {
+    setResult(Number(loanAmount) * (1 + Number(interestRate)))
   };
 
   return (
@@ -52,6 +57,17 @@ function CalculateForm() {
             label="Interest Rate"
             onChange={onInterestRate}
           />
+        </Grid>
+        <Grid item xs={12}>
+          <Button
+            onClick={calcurateResult}
+            variant="outlined"
+          >
+            Click me
+          </Button>
+        </Grid>
+        <Grid item xs={12}>
+          {result}
         </Grid>
     </Grid>
   );
