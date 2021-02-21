@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Grid, TextField, Button } from '@material-ui/core';
+
+import { CalculateContext } from './Main';
 
 function CalculateForm() {
   const [age, setAge] = useState(0);
   const [loanAmount, setLoanAmount] = useState(0);
   const [salary, setSalary] = useState(0);
   const [interestRate, setInterestRate] = useState(0);
-  const [result, setResult] = useState(0);
+
+  const { setResult } = useContext(CalculateContext)
 
   const onChangeAge = event => {
     setAge(event.target.value);
@@ -30,45 +33,42 @@ function CalculateForm() {
 
   return (
     <Grid container>
-        <Grid item xs={6}>
-          <TextField
-            required
-            label="Your Age"
-            onChange={onChangeAge}
-          />
-        </Grid>
-        <Grid item xs={6}>
-          <TextField
-            required
-            label="Loan Amount"
-            onChange={onLoanAmount}
-          />
-        </Grid>
-        <Grid item xs={6}>
-          <TextField
-            required
-            label="Your Salary"
-            onChange={onSalary}
-          />
-        </Grid>
-        <Grid item xs={6}>
-          <TextField
-            required
-            label="Interest Rate"
-            onChange={onInterestRate}
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <Button
-            onClick={calcurateResult}
-            variant="outlined"
-          >
-            Click me
-          </Button>
-        </Grid>
-        <Grid item xs={12}>
-          {result}
-        </Grid>
+      <Grid item xs={6}>
+        <TextField
+          required
+          label="Your Age"
+          onChange={onChangeAge}
+        />
+      </Grid>
+      <Grid item xs={6}>
+        <TextField
+          required
+          label="Loan Amount"
+          onChange={onLoanAmount}
+        />
+      </Grid>
+      <Grid item xs={6}>
+        <TextField
+          required
+          label="Your Salary"
+          onChange={onSalary}
+        />
+      </Grid>
+      <Grid item xs={6}>
+        <TextField
+          required
+          label="Interest Rate"
+          onChange={onInterestRate}
+        />
+      </Grid>
+      <Grid item xs={12}>
+        <Button
+          onClick={calcurateResult}
+          variant="outlined"
+        >
+          Click me
+        </Button>
+      </Grid>
     </Grid>
   );
 }
