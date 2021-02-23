@@ -9,8 +9,10 @@ function CalculateResult() {
 
   return (
     <Grid container>
-      <p>This component is CalculateResult.</p>
-      <p>{ result }</p>
+      {result !== 0
+          ? <p>{ result }</p>
+          : <p></p>
+      }
     </Grid>
   );
 }
