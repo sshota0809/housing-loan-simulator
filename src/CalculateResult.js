@@ -13,7 +13,6 @@ function CalculateResult() {
           ? <p>{ result }</p>
           : <p></p>
       }
-      This component is CalculateResult.
     </Grid>
   );
 }

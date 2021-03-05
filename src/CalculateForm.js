@@ -36,6 +36,7 @@ function CalculateForm() {
       <Grid item xs={6}>
         <TextField
           required
+          id="age"
           label="Your Age"
           onChange={onChangeAge}
         />
@@ -43,6 +44,7 @@ function CalculateForm() {
       <Grid item xs={6}>
         <TextField
           required
+          id="loan"
           label="Loan Amount"
           onChange={onLoanAmount}
         />
@@ -50,6 +52,7 @@ function CalculateForm() {
       <Grid item xs={6}>
         <TextField
           required
+          id="salary"
           label="Your Salary"
           onChange={onSalary}
         />
@@ -57,12 +60,14 @@ function CalculateForm() {
       <Grid item xs={6}>
         <TextField
           required
+          id="interest"
           label="Interest Rate"
           onChange={onInterestRate}
         />
       </Grid>
       <Grid item xs={12}>
         <Button
+          id="result-button"
           onClick={calcurateResult}
           variant="outlined"
         >
