@@ -1,3 +1,3 @@
 # housing-loan-simulator
-This is to simulate housing loan with some condition.
+This tools is to simulate housing loan with some condition.
 
