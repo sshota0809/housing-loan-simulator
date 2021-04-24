@@ -5,7 +5,7 @@ on:
       - main
 
 jobs:
-  test:
+  ExecuteTest:
     name: Execute Test
     runs-on: ubuntu-latest
     environment:
