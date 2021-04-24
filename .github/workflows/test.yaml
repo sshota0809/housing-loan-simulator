@@ -8,6 +8,8 @@ jobs:
   test:
     name: Execute Test
     runs-on: ubuntu-latest
+    environment:
+      name: test
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
